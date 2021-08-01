@@ -1,16 +1,19 @@
-import React, {useEffect, useState} from 'react'
-import { Article, Card } from '../../components'
+import React, {Fragment, useEffect, useState} from 'react'
+import { Article, Card, Spinner } from '../../components'
 
 const Home = () => {
 
   const [getListPokemons, setGetListPokemons] = useState([])
   const [numPage, setNumPage] = useState(0)
   const [maxLimit, setMaxLimit] = useState(5)
+  const [isLoading, setIsLoading] = useState(true)
 
   const handleChangePage = event => {
     if(event.target.id === 'next') {
+      setIsLoading(true)
       setNumPage(numPage + maxLimit)
     } else if(event.target.id === 'previous' && numPage > 0) {
+      setIsLoading(true)
       setNumPage(numPage - maxLimit)
     }
   }
@@ -34,6 +37,7 @@ const Home = () => {
         })
       })
       const pokemonsList = await Promise.all(pokemonsPromises)
+      setIsLoading(false)
       setGetListPokemons(pokemonsList)
     }
     catch (error) {
@@ -47,6 +51,11 @@ const Home = () => {
 
   return (
     <section className="container mx-auto px-4 md:px-0 py-32" >
+    { isLoading ? <div className='flex justify-center' >
+        <div className='w-24' >
+          <Spinner />
+        </div> 
+        </div> : <Fragment>
       <div className='flex items-center justify-between font-light'>
         <h1 className='font-headers text-2xl py-4' >Pokemons</h1>
         <div className='flex items-center' >
@@ -59,15 +68,16 @@ const Home = () => {
           </select>
         </div>
       </div>
-    <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-4' >
-      {
-        getListPokemons.map((item, index) => <Card key={index} pokemon={item} />)
-      }
+      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-4' >
+        {
+          getListPokemons.map((item, index) => <Card key={index} pokemon={item} />)
+        }
       </div>
       <div className='mt-6 flex justify-between ' >
         <button onClick={handleChangePage} id='previous' className='uppercase px-6 py-2 font-light text-primary-400 text-sm' ><i className="fas fa-chevron-left pr-2"></i>anterior</button>
         <button onClick={handleChangePage} id='next' className='uppercase px-6 py-2 font-light text-primary-400 text-sm' >siguiente<i className="fas fa-chevron-right pl-2"></i></button>
       </div>
+      </Fragment> }
       <Article />
     </section>
   )

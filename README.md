@@ -1,4 +1,16 @@
 # Pokedex Challenge
-Aplicación desarrollada para un challenge solicitado por [Sooft Technology](https://www.sooft.com.ar) . Web creada con React, usando Promesas para recuperar los datos de la Api; **TailwindCss**, para lograr un sitio responsive y dar estilos a los componentes.
-Utilizar la API/REST de [POKEAPI](https://pokeapi.co) con paginado de a 5 pokemons. Ver detalles de cada uno de estos, mostrando sus habilidades, descripciones e imágenes en al menos 2 idiomas.
-Reto logrado con paginado dinámico de *5-10-15-20* cards de pokemons, según selección. Sección de detalles con las caracteristicas en *español/inglés* de forma dinámica.</p>
+
+## Demo
+[PokeApi](https://pokedex-challenge-sooft.netlify.app/) *Demo publicada en* [Netlify](https://www.netlify.com/)
+
+## Sobre la APP
+Aplicación sencilla, consumiendo la Pokeapi.
+Página inicial con un paginado dinámico de *5-10-15-20* cards de pokemons según selector.
+Vista de detalles de cada uno de los pokemons, mostrando sus habilidades, descripción e imágenes en 2 idiomas *(español/inglés)* de forma dinámica.
+
+## Herramientas y Tecnologías
+-Figma. *Diseño y prototipado de la app*
+-JavaScript. *Uso de promesas para recuperar datos desde la API*
+-[React](https://es.reactjs.org). Librería js.
+-[TailwindCss](https://tailwindcss.com). Framework CSS.
+-API / REST [POKEAPI](https://pokeapi.co)

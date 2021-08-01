@@ -13,7 +13,7 @@ const Footer = () => {
                     <span>Creado con<i className="hover:text-primary-500 transition-colors duration-300 ease-in-out far fa-heart text-sm px-2"></i>por <a className='hover:text-primary-500 transition-colors duration-300 ease-in-out' href="http://mariocampbell.com.ar" target='_blank' rel="noopener noreferrer"><strong>mcmpbll783</strong></a></span>
                 </p>
         </footer>
-    );
-};
+    )
+}
 
 export default Footer;

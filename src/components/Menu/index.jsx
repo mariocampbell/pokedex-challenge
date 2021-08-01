@@ -1,14 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Avatar, Hero } from '../'
-import {sooft} from '../../images'
+import {isoMarioCampbell} from '../../images'
 
 const Menu = () => {
   return (
     <header className='bg-primary-900 text-white'>
       <section className='container mx-auto py-4 flex justify-between items-center' >
         <Link to='/' >
-          <img className='h-12' src={sooft} alt="Sooft technology" />
+          <img className='h-12' src={isoMarioCampbell} alt="Sooft technology" />
         </Link>
         <a href="http://www.mariocampbell.com.ar" target='_blank' rel='noopener noreferrer' >
           <section className='flex items-center' >
