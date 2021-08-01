@@ -9,8 +9,8 @@ Página inicial con un paginado dinámico de *5-10-15-20* cards de pokemons seg�
 Vista de detalles de cada uno de los pokemons, mostrando sus habilidades, descripción e imágenes en 2 idiomas *(español/inglés)* de forma dinámica.
 
 ## Herramientas y Tecnologías
--Figma. *Diseño y prototipado de la app*
--JavaScript. *Uso de promesas para recuperar datos desde la API*
--[React](https://es.reactjs.org). Librería js.
--[TailwindCss](https://tailwindcss.com). Framework CSS.
--API / REST [POKEAPI](https://pokeapi.co)
+- Figma. *Diseño y prototipado de la app*
+- JavaScript. *Uso de promesas para recuperar datos desde la API*
+- [React](https://es.reactjs.org). Librería js.
+- [TailwindCss](https://tailwindcss.com). Framework CSS.
+- API / REST [POKEAPI](https://pokeapi.co)
