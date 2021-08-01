@@ -1,5 +1,7 @@
 # Pokedex Challenge
 
+![Pokemons Pokemons](./src/images/pokemon.svg)
+
 ## Demo
 [PokeApi](https://pokedex-challenge-sooft.netlify.app/) *Demo publicada en* [Netlify](https://www.netlify.com/)
 
